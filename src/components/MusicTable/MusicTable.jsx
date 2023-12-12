@@ -1,14 +1,31 @@
-const MusicTable = ({}) => {
+import React from "react";
+
+const MusicTable = ({ songs }) => {
   return (
-    <div>
-      <span>Title</span>
-      <span>Artist</span>
-      <span>Album</span>
-      <span>Genre</span>
-      <span>Release Date</span>
-      <span></span>
-      <span></span>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Genre</th>
+          <th>Release Date</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {songs.map((song) => (
+          <tr key={song.id}>
+            <td>{song.title}</td>
+            <td>{song.artist}</td>
+            <td>{song.album}</td>
+            <td>{song.genre}</td>
+            <td>{song.releaseDate}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
