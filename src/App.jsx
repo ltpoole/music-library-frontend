@@ -12,7 +12,7 @@ function App() {
   const displaySongs = async () => {
     try {
       const response = await axios.get("https://localhost:7081/api/Songs");
-      console.log(response);
+      // console.log(response);
       setSongs(response.data);
     } catch (error) {
       console.warn("Error in displaySongs request: ", error);
@@ -28,7 +28,7 @@ function App() {
       <Header />
       <SearchBar />
       <MusicTable songs={songs} />
-      <AddSongForm />
+      <AddSongForm onNewSong={displaySongs} />
     </div>
   );
 }

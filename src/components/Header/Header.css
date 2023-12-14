@@ -1,0 +1,9 @@
+.header {
+  background-color: #c6ad8f;
+  color: #425664;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}

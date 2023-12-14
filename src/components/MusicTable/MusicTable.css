@@ -1,0 +1,16 @@
+td {
+  border: 1px solid;
+  padding: 8px;
+  background-color: #425664;
+  color: white;
+}
+
+th {
+  border: 1px solid;
+  padding: 8px;
+  background-color: #c6ad8f;
+}
+
+table {
+  align-content: center;
+}

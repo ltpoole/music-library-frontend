@@ -1,6 +1,15 @@
+import axios from "axios";
 import React from "react";
+import "./MusicTable.css";
 
 const MusicTable = ({ songs }) => {
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`https://localhost:7081/api/Songs`);
+    } catch (error) {
+      console.warn("Error deleting song: ", error);
+    }
+  };
   return (
     <table>
       <thead>
@@ -22,6 +31,12 @@ const MusicTable = ({ songs }) => {
             <td>{song.album}</td>
             <td>{song.genre}</td>
             <td>{song.releaseDate}</td>
+            <td>
+              <button onClick={handleDelete}>Delete Song</button>
+            </td>
+            <td>
+              <button>Edit Song</button>
+            </td>
           </tr>
         ))}
       </tbody>
